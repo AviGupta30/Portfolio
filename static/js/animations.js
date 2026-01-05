@@ -40,8 +40,10 @@ function initScrollAnimations() {
         gsap.fromTo(workCards, { y: 50, opacity: 0 }, { scrollTrigger: { trigger: "#work", start: "top 80%" }, y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: "power3.out" });
     }
 
-    const footerBtn = document.querySelector('.aesthetic-btn');
+    // FIX: Targeting specific footer button so Resume button is not hidden
+    const footerBtn = document.querySelector('#contact .aesthetic-btn');
     const footerMeta = document.querySelector('.footer-meta');
+    
     if(footerBtn) {
         gsap.fromTo(footerBtn, { scale: 0.5, opacity: 0 }, { scrollTrigger: { trigger: "#contact", start: "top 75%" }, scale: 1, opacity: 1, duration: 1.5, ease: "expo.out" });
     }
@@ -139,5 +141,7 @@ function initHolographicCards() {
 function animateEntrance() {
     gsap.from(".hero-text h1", { x: -50, opacity: 0, duration: 1.5, ease: "power4.out" });
     gsap.from(".hero-text .subtitle", { x: -30, opacity: 0, duration: 1.5, delay: 0.3 });
+    // Animate the Resume Button after the subtitle
+    gsap.from(".hero-cta-wrapper", { y: 20, opacity: 0, duration: 1.5, delay: 0.6, ease: "expo.out" });
     gsap.from(".hero-visual", { x: 50, opacity: 0, duration: 1.5, delay: 0.5, ease: "power4.out" });
 }

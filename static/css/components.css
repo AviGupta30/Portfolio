@@ -95,6 +95,10 @@
     background: var(--accent-dim); border-color: var(--accent);
     box-shadow: 0 0 20px var(--accent-dim); letter-spacing: 2px;
 }
+/* Ensure icon has space */
+.aesthetic-btn svg, .aesthetic-btn i {
+    margin-right: 10px;
+}
 
 /* CODE HINTS & DETAILS */
 .code-hints { display: flex; gap: 15px; flex-direction: column; }
