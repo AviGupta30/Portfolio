@@ -1,0 +1,35 @@
+/* Mobile Fix */
+@media (max-width: 1200px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .sticky-sidebar { position: relative; top: 0; margin-top: 50px; }
+    .split-feature-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .hero-content { flex-direction: column-reverse; text-align: center; gap: 3rem; }
+    .hero-text { text-align: center; }
+    .hero h1 { font-size: 2.5rem; }
+    .profile-container { width: 250px; height: 320px; }
+    .bento-grid, .education-grid { grid-template-columns: 1fr; }
+    .card-large, .card-tall { grid-column: span 1; grid-row: span 1; }
+    .footer-meta { flex-direction: column; gap: 2rem; }
+    
+    .kinetic-text { font-size: 20vw; -webkit-text-stroke: 1px rgba(255,255,255,0.05); }
+    
+    /* Certifications Mobile */
+    .cert-card { flex-direction: column; text-align: center; gap: 1rem; }
+    .cert-thumb { width: 120px; height: 120px; margin: 0 auto; }
+    .cert-header { justify-content: center; }
+    .cert-card:hover { transform: translateY(-5px); }
+
+    /* Timeline Mobile */
+    .timeline-line { left: 20px; }
+    .timeline-item { width: 100%; left: 0; padding-left: 50px; text-align: left; }
+    .timeline-item.left { text-align: left; }
+    .timeline-item.left .timeline-dot, .timeline-item.right .timeline-dot { left: 12px; }
+    
+    /* HUD Mobile Hide */
+    #adaptive-hud { display: none; }
+}
+
+@media (hover: none) { * { cursor: auto !important; } .trail-dot, .global-spotlight { display: none !important; } }

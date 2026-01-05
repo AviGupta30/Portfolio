@@ -1,0 +1,62 @@
+/* =========================================
+   1. RESET, VARIABLES & SCROLLBAR
+   ========================================= */
+:root {
+    --bg-color: #0a0a0a;
+    --card-color: #171717;
+    --border-color: #262626;
+    --text-primary: #ededed;
+    --text-secondary: #a1a1aa;
+    
+    /* DYNAMIC ACCENT SYSTEM */
+    --accent: #00f3ff;
+    --accent-glow: rgba(0, 243, 255, 0.4);
+    --accent-dim: rgba(0, 243, 255, 0.1);
+    
+    /* FONT VARIABLES */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+
+    /* Smooth transition for color swaps */
+    transition: --accent 0.5s ease, --accent-glow 0.5s ease, --accent-dim 0.5s ease; 
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-heading);
+    overflow-x: hidden;
+    min-height: 100vh;
+    letter-spacing: -0.02em;
+}
+
+a { text-decoration: none; cursor: none !important; }
+button, .card, input { cursor: none !important; }
+
+/* Font assignments */
+.hacker-text, 
+.edu-year, 
+.timeline-year, 
+.meta-item, 
+.counter, 
+.tech-pill,
+.skill-model span,
+.aesthetic-btn,
+.hud-label, .hud-value,
+.cert-issuer, .cert-desc,
+input, textarea {
+    font-family: var(--font-code) !important;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; border: 2px solid #0a0a0a; }
+::-webkit-scrollbar-thumb:hover { background: #525252; }
+
+/* GLOBAL CURSOR LOGIC */
+body.cursor-visible, body.cursor-visible * { cursor: auto !important; }
+body.cursor-visible .trail-dot, body.cursor-visible .global-spotlight { display: none !important; }
+body.cursor-visible input, body.cursor-visible textarea { cursor: text !important; }
+body.cursor-visible button, body.cursor-visible .close-btn { cursor: pointer !important; }

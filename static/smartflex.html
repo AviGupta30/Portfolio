@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFlex Case Study | Avi Gupta</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <link rel="stylesheet" href="/styles.css"> 
+    <link rel="stylesheet" href="/smartflex.css"> 
+    <link rel="stylesheet" href="/chatbot.css"> <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="project-page-body">
+
+    <div class="preloader"><div class="counter">0</div></div>
+    <div class="crt-overlay"></div>
+    <div class="velocity-bar left"></div>
+    <div class="velocity-bar right"></div>
+
+    <a href="/" class="back-home-btn">
+        <i data-lucide="arrow-left"></i> BACK TO VOID
+    </a>
+
+    <section class="project-hero">
+        <div class="hero-bg-image" style="background-image: url('/static/smartflex/hero-landing.jpg');"></div>
+        <div class="project-hero-content">
+            <h1 class="project-title hacker-text" data-value="SMARTFLEX">SMARTFLEX</h1>
+            <p class="project-subtitle">Automated Academic Management & Scheduling System</p>
+            
+            <div class="project-meta-row">
+                <div id="pill-year" class="meta-pill interactive-pill" data-msg="Built in Dec 2025">
+                    <i data-lucide="calendar"></i> 2025
+                </div>
+                <div id="pill-stack" class="meta-pill interactive-pill" data-msg="React + Python Stack">
+                    <i data-lucide="layout"></i> Full Stack
+                </div>
+                <a href="https://github.com/AviGupta30/sih_final" target="_blank" class="meta-pill interactive-pill link-pill">
+                    <i data-lucide="github"></i> Repository
+                </a>
+            </div>
+            <div id="meta-toast" class="meta-toast"></div>
+        </div>
+    </section>
+
+    <section class="project-details-container">
+        <div class="details-grid">
+            
+            <div class="details-text reveal">
+                
+                <h2>The Challenge</h2>
+                <p>
+                    Scheduling for a large university is an NP-hard problem. Coordinating 48+ professors, 1250+ students, and 89 classrooms while respecting individual constraints and optimizing resource usage typically takes weeks of manual work.
+                </p>
+                
+                <h2>The Solution</h2>
+                <p>
+                    SmartFlex is an intelligent engine that automates this. Using <strong>Constraint Satisfaction Logic (OR-Tools)</strong>, it generates conflict-free schedules in seconds. It doesn't just plan; it adapts.
+                </p>
+
+                <div class="feature-block reveal" style="margin-top: 30px;">
+                    <img src="/static/smartflex/tech-showcase.jpg" alt="Tech Stack" class="feature-img">
+                    <p class="caption">Powered by Python, FastAPI, and Constraint Optimization.</p>
+                </div>
+
+                <div class="divider-line"></div>
+
+                <h2>Admin Control Center</h2>
+                <p>A unified dashboard provides live telemetry of the institution—total courses, active classrooms, and system health logs.</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/admin-dashboard.png" alt="Admin Stats">
+                        <div class="caption">System Telemetry</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/generator-ui.png" alt="Generator">
+                        <div class="caption">Generation Engine</div>
+                    </div>
+                </div>
+
+                <h2>Dynamic Conflict Resolution</h2>
+                <p>When "Teacher A" takes a leave, SmartFlex detects the void and calculates the best replacement based on subject expertise and free slots.</p>
+                <div class="feature-block reveal">
+                    <img src="/static/smartflex/conflict-solver.png" alt="Conflict Solver" class="feature-img">
+                </div>
+
+                <div class="divider-line"></div>
+
+                <h2>Faculty Experience</h2>
+                <p>Teachers can manage their personalized schedules, track departmental resource allocation, and view their assigned lecture halls at a glance.</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/teacher-schedule.png" alt="Teacher Schedule">
+                        <div class="caption">Personalized Timetable</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/teacher-classrooms.png" alt="Teacher Classrooms">
+                        <div class="caption">Resource Assignment</div>
+                    </div>
+                </div>
+
+                <div class="divider-line"></div>
+
+                <h2>Student Intelligence</h2>
+                <div class="split-feature-grid reveal">
+                    
+                    <div class="split-item large">
+                        <h3 class="split-title">Distraction-Free Dashboard</h3>
+                        <p class="split-desc">A unified view for daily schedules, attendance metrics, and virtual links.</p>
+                        <img src="/static/smartflex/student-schedule.png" alt="Student Dashboard" class="feature-img">
+                    </div>
+
+                    <div class="split-item small highlight-card" id="weather-card">
+                        <div class="weather-content">
+                            <i data-lucide="cloud-lightning" class="weather-icon"></i>
+                            <h3 class="split-title">Weather-Aware</h3>
+                            <p class="split-desc" id="weather-desc">
+                                SmartFlex connects to live weather APIs to predict disruptions.
+                            </p>
+                            <p class="split-desc">
+                                System proactively advises shifting specific slots to <strong>Online Mode</strong>.
+                            </p>
+                            <div class="status-indicator">
+                                <span class="dot"></span> <span id="api-status">API ACTIVE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="gallery-grid three-col" style="margin-top: 30px;">
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/attendance.png" alt="Attendance">
+                        <div class="caption">Attendance Tracking</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/student-classrooms.png" alt="Student Classrooms">
+                        <div class="caption">Classroom Hub</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/static/smartflex/classroom-stream.png" alt="Classrooms">
+                        <div class="caption">Virtual Streaming Hub</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="details-sidebar sticky-sidebar reveal">
+                <h3>Core Stack</h3>
+                <div class="tech-stack-cloud">
+                    <span class="tech-tag"><i class="devicon-python-plain"></i> Python</span>
+                    <span class="tech-tag">OR-Tools</span>
+                    <span class="tech-tag"><i class="devicon-react-original"></i> React</span>
+                    <span class="tech-tag"><i class="devicon-fastapi-plain"></i> FastAPI</span>
+                    <span class="tech-tag"><i class="devicon-postgresql-plain"></i> SQL</span>
+                </div>
+
+                <h3>Key Features</h3>
+                <ul class="sidebar-list">
+                    <li><strong>CSP Algo</strong> <span>Optimization</span></li>
+                    <li><strong>Live Logs</strong> <span>Monitoring</span></li>
+                    <li><strong>Weather API</strong> <span>Smart Alerts</span></li>
+                    <li><strong>RBAC</strong> <span>Security</span></li>
+                </ul>
+
+                <a href="https://github.com/AviGupta30/sih_final" target="_blank" class="action-btn">
+                    <i data-lucide="github"></i> View Source Code
+                </a>
+                
+                <div style="margin-top: 40px;">
+                    <img src="/static/smartflex/features-hub.png" class="feature-img" style="opacity: 0.8;">
+                    <p class="caption" style="text-align: left;">Unified Role Access</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="simple-footer">
+        <p>Avi Gupta &copy; 2026 | SmartFlex Case Study</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="smartflex.js"></script> 
+    <script src="chatbot.js"></script> <script>lucide.createIcons();</script>
+</body>
+</html>

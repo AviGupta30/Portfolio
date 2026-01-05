@@ -1,0 +1,30 @@
+/* === RED MODE OVERRIDES === */
+html.mode-red {
+    --accent: #ff0000;
+    --accent-glow: rgba(255, 0, 0, 0.6);
+    --accent-dim: rgba(255, 0, 0, 0.2);
+}
+
+/* Specific Gradient Overrides for Red Mode */
+html.mode-red .aurora-guide.left {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.7), transparent);
+}
+html.mode-red .aurora-guide.right {
+    background: linear-gradient(-90deg, rgba(255, 69, 0, 0.7), transparent);
+}
+html.mode-red .velocity-bar {
+    background: linear-gradient(to bottom, transparent, #ff0000 40%, #ff0000 60%, transparent);
+    box-shadow: 0 0 30px #ff0000;
+}
+html.mode-red .fog-cyan {
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5), transparent 70%);
+}
+html.mode-red .fog-violet {
+    background: radial-gradient(circle, rgba(255, 69, 0, 0.4), transparent 70%);
+}
+html.mode-red .singularity-void {
+    box-shadow: 0 0 100px 40px #000, 0 0 200px 100px rgba(255, 0, 0, 0.2), 0 0 600px 200px rgba(255, 255, 255, 0.05);
+}
+html.mode-red .event-horizon-container:hover .singularity-void {
+    box-shadow: 0 0 120px 60px #000, 0 0 300px 150px rgba(255, 0, 0, 0.2), 0 0 800px 300px rgba(255, 255, 255, 0.1);
+}

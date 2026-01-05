@@ -1,0 +1,99 @@
+/* NOISE TEXTURE */
+body::before {
+    content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.05; pointer-events: none; z-index: 9999; mix-blend-mode: overlay;
+}
+
+/* AURORA SCROLL GUIDES */
+.aurora-guide {
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 30vw;
+    max-width: 600px;
+    z-index: 5; 
+    pointer-events: none;
+    opacity: 0;
+    will-change: opacity;
+    filter: blur(60px); 
+    mix-blend-mode: screen; 
+    transform: translateZ(0);
+    transition: background 0.8s ease;
+}
+.aurora-guide.left { left: -5vw; background: linear-gradient(90deg, var(--accent-glow), transparent); }
+.aurora-guide.right { right: -5vw; background: linear-gradient(-90deg, rgba(138, 43, 226, 0.7), transparent); }
+
+/* COSMIC FOG */
+#cosmic-fog {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -2; pointer-events: none; overflow: hidden;
+    opacity: 0.6; transition: opacity 1s ease;
+}
+.fog-orb {
+    position: absolute; width: 800px; height: 800px; border-radius: 50%;
+    filter: blur(120px); opacity: 0.4;
+    animation: fogDrift 20s infinite alternate ease-in-out;
+    will-change: transform; transition: background 0.8s ease;
+}
+.fog-cyan { background: radial-gradient(circle, var(--accent-glow), transparent 70%); top: -200px; left: -200px; animation-delay: 0s; }
+.fog-violet { background: radial-gradient(circle, rgba(112, 0, 255, 0.3), transparent 70%); bottom: -200px; right: -200px; animation-delay: -10s; }
+
+@keyframes fogDrift {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, 50px) scale(1.1); }
+    100% { transform: translate(-30px, 20px) scale(0.9); }
+}
+
+/* KINETIC LAYERS */
+#kinetic-layers {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1; overflow: hidden; pointer-events: none;
+}
+.kinetic-layer {
+    position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    will-change: transform; transition: transform 0.1s linear;
+}
+.layer-1 { opacity: 0.4; transform: scale(1); }
+.layer-2 { opacity: 0.2; transform: scale(1.2); }
+.layer-3 { opacity: 0.1; background-size: 150px 150px; transform: scale(1.5); }
+
+/* VELOCITY BARS */
+.velocity-bar {
+    position: fixed; top: 50%; transform: translateY(-50%) scaleY(0.5);
+    width: 6px; height: 60vh; 
+    background: linear-gradient(to bottom, transparent, var(--accent) 40%, var(--accent) 60%, transparent);
+    z-index: 12000; opacity: 0.1; pointer-events: none;
+    filter: blur(6px); box-shadow: 0 0 20px var(--accent);
+    will-change: transform, opacity, width, filter;
+    transition: opacity 0.05s ease-out, transform 0.1s ease-out, width 0.1s ease-out, filter 0.1s ease-out, background 0.8s ease;
+}
+.velocity-bar.left { left: 0; }
+.velocity-bar.right { right: 0; }
+
+/* OVERLAYS & SPOTLIGHT */
+.trail-dot {
+    position: fixed; top: 0; left: 0; width: 6px; height: 6px;
+    background-color: rgba(255, 255, 255, 0.6); border-radius: 50%;
+    pointer-events: none; z-index: 9998; transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+.global-spotlight {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    pointer-events: none; z-index: 9000;
+    background: radial-gradient(800px circle at var(--x) var(--y), rgba(255, 255, 255, 0.07), transparent 40%);
+    mix-blend-mode: screen; 
+}
+.crt-overlay {
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 9990; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+    background-size: 100% 4px; box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
+    mix-blend-mode: overlay; opacity: 0.4;
+}
+.transition-curtain {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #000; z-index: 99999; transform: translateY(0); will-change: transform;
+}

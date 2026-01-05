@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> Portfolio | Avi Gupta</title>
+    <link rel="icon" type="image/png" href="/static/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/effects.css">
+    <link rel="stylesheet" href="/static/css/themes.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    
+    <link rel="stylesheet" href="/chatbot.css"> 
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("l_rMoe3K-UdjyJLmu"); 
+       })();
+    </script>
+
+    <script>console.log("HTML Loaded. Waiting for modules...");</script>
+</head>
+<body>
+
+    <audio id="audio-click" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-technology-select-3124.mp3" preload="auto"></audio>
+    <audio id="audio-drone" src="https://assets.mixkit.co/sfx/preview/mixkit-space-deploy-2660.mp3" loop preload="auto"></audio>
+    <audio id="audio-overdrive" src="https://assets.mixkit.co/sfx/preview/mixkit-futuristic-robotic-glitch-3081.mp3" preload="auto"></audio>
+
+    <div class="aurora-guide left"></div>
+    <div class="aurora-guide right"></div>
+
+    <div id="cosmic-fog">
+        <div class="fog-orb fog-cyan"></div>
+        <div class="fog-orb fog-violet"></div>
+    </div>
+
+    <div id="kinetic-layers">
+        <div class="kinetic-layer layer-1"></div>
+        <div class="kinetic-layer layer-2"></div>
+        <div class="kinetic-layer layer-3"></div>
+    </div>
+
+    <div class="velocity-bar left"></div>
+    <div class="velocity-bar right"></div>
+    <div class="crt-overlay"></div>
+
+    <section id="home" class="hero">
+        <div id="webgl-container"></div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="magnetic-text">
+                    <span class="hacker-text" data-value="Building digital">Building digital</span><br>
+                    <span class="hacker-text" data-value="experiences that matter.">experiences that matter.</span>
+                </h1>
+                <p class="subtitle reveal">Software Engineer.</p>
+            </div>
+
+            <div class="hero-visual reveal">
+                <div class="profile-container">
+                    <img src="myimage.png" 
+                           alt="Avi Gupta" 
+                           class="hero-profile-img"
+                           onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png';">
+                </div>
+                <h2 class="profile-name hacker-text" data-value="Avi Gupta">Avi Gupta</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-container">
+        <div class="kinetic-text text-engineer">ENGINEER</div>
+        
+        <h2 class="section-title reveal hacker-text" data-value="About Me">About Me</h2>
+        
+        <div class="card reveal about-card" style="padding: 2.5rem; margin-bottom: 4rem; cursor: auto !important;">
+            <div class="bio-content" style="color: #ededed; line-height: 1.8; font-size: 1rem;">
+                <p style="margin-bottom: 1.5rem;">
+                    I'm a B.Tech student at <span style="color: var(--accent); font-weight: 600;">Delhi Technological University (DTU)</span>, passionate about coding and software development. I hold a sound academic record with 97.2% in 12th boards and a JEE rank of 15057.
+                </p>
+                <p style="margin-bottom: 1.5rem;">
+                    Currently, I focus on <span style="color: var(--accent);">Web Development</span> and <span style="color: var(--accent);">Data Structures & Algorithms (Java)</span>. I am building a solid foundation in both frontend and backend to create efficient, user-friendly applications.
+                </p>
+                <p style="border-left: 2px solid var(--accent); padding-left: 1rem; color: #a1a1aa;">
+                    Looking for <span style="color: #ededed;">Internships</span> or projects to apply my skills in Web Development, Java, and DSA to real-world problems.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="section-title reveal hacker-text" data-value="Education">Education</h2>
+        <div class="education-grid reveal">
+            <div class="card edu-card">
+                <div class="edu-year">2024 - 2028</div>
+                <h3 class="edu-title">B.Tech ECE</h3>
+                <p class="edu-school">Delhi Technological University</p>
+                <p class="edu-score">Electronics & Comm. Engineering</p>
+            </div>
+            <div class="card edu-card">
+                <div class="edu-year">2024</div>
+                <h3 class="edu-title">JEE Mains</h3>
+                <p class="edu-school">All India Rank</p>
+                <p class="edu-score" style="color: var(--accent); font-weight: 700;">AIR 15057</p>
+            </div>
+            <div class="card edu-card">
+                <div class="edu-year">Class 12th</div>
+                <h3 class="edu-title">Nehru World School</h3>
+                <p class="edu-school">Ghaziabad</p>
+                <p class="edu-score">Score: 97.2%</p>
+            </div>
+            <div class="card edu-card">
+                <div class="edu-year">Class 10th</div>
+                <h3 class="edu-title">Nehru World School</h3>
+                <p class="edu-school">Ghaziabad</p>
+                <p class="edu-score">Score: 94%</p>
+            </div>
+        </div>
+
+        <div class="kinetic-text text-syntax">SYNTAX</div>
+
+        <h2 class="section-title reveal hacker-text" data-value="Technical Stack" style="margin-top: 4rem;">Technical Stack</h2>
+        
+        <div id="skill-runway-container" class="reveal">
+            <div class="runway-floor"></div>
+            <div id="skill-stage"></div> 
+        </div>
+
+        <div class="skill-list reveal" style="margin-top: 2rem; opacity: 0.6;">
+            <div class="skill-tag">HTML</div>
+            <div class="skill-tag">CSS</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">FastAPI</div>
+            <div class="skill-tag">Python</div>
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">Web Development</div>
+            <div class="skill-tag">DSA</div>
+            <div class="skill-tag">ML</div>
+            <div class="skill-tag">C</div>
+            <div class="skill-tag">MySQL</div>
+            <div class="skill-tag">MongoDB</div>
+        </div>
+    </section>
+
+    <section id="certifications" class="cert-container">
+        <div class="kinetic-text text-authorized">AUTHORIZED</div>
+        
+        <h2 class="section-title reveal hacker-text" data-value="Certifications">Certifications</h2>
+        
+        <div class="cert-grid reveal">
+            <div class="card cert-card" data-img="/static/certificates/dsa.png">
+                <div class="cert-thumb">
+                    <img src="/static/certificates/dsa.png" alt="DSA Certificate">
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header">
+                        <span class="tech-pill">JAVA</span>
+                        <span class="tech-pill">ALGORITHMS</span>
+                    </div>
+                    <h3 class="cert-title">DSA with Java (Alpha)</h3>
+                    <p class="cert-issuer">Apna College</p>
+                    <p class="cert-desc">Comprehensive mastery of Data Structures and Algorithms using Java.</p>
+                </div>
+            </div>
+
+            <div class="card cert-card" data-img="/static/certificates/webdev.png">
+                <div class="cert-thumb">
+                    <img src="/static/certificates/webdev.png" alt="Web Dev Certificate">
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header">
+                        <span class="tech-pill">FULL STACK</span>
+                        <span class="tech-pill">MERN</span>
+                    </div>
+                    <h3 class="cert-title">Full Stack Web Development</h3>
+                    <p class="cert-issuer">Apna College (Delta)</p>
+                    <p class="cert-desc">End-to-end web development covering frontend, backend, and databases.</p>
+                </div>
+            </div>
+
+            <div class="card cert-card" data-img="/static/certificates/java.png">
+                <div class="cert-thumb">
+                    <img src="/static/certificates/java.png" alt="Java Advanced Certificate">
+                </div>
+                <div class="cert-info">
+                    <div class="cert-header">
+                        <span class="tech-pill">ADVANCED</span>
+                        <span class="tech-pill">OOP</span>
+                    </div>
+                    <h3 class="cert-title">Java Advanced (English)</h3>
+                    <p class="cert-issuer">LearnTube</p>
+                    <p class="cert-desc">Advanced concepts in Java programming and Object Oriented principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="journey-container">
+        <h2 class="section-title reveal hacker-text" data-value="My Journey">My Journey</h2>
+        
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-item left reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2021</span>
+                    <h3>High School Beginnings</h3>
+                    <p>Started coding with basic Python & HTML.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2022</span>
+                    <h3>Class 10th</h3>
+                    <p>Achieved 94% in Boards. Deep dive into Science.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024</span>
+                    <h3>JEE & Class 12th</h3>
+                    <p>Scored 97.2% in 12th. Cracked JEE Mains (AIR 15057).</p>
+                </div>
+            </div>
+
+            <div class="timeline-item right reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2024</span>
+                    <h3>Joined DTU</h3>
+                    <p>Enrolled in B.Tech (ECE). Started "Void" projects.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item left reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2025</span>
+                    <h3>Full Stack Dev</h3>
+                    <p>Building complex systems like SmartFlex & CMS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="work-container">
+        <div class="kinetic-text text-creator">CREATOR</div>
+
+        <h2 class="section-title reveal hacker-text" data-value="Selected Work">Selected Work</h2>
+        
+        <div class="bento-grid reveal">
+            <a href="smartflex.html" class="card card-large project-card" data-id="smartflex">
+                <img src="/static/smartflex/hero-landing.jpg" class="card-image" alt="SmartFlex">
+                <div class="card-content">
+                    <i data-lucide="calendar-clock" class="card-icon"></i>
+                    <div>
+                        <h3 class="hacker-text" data-value="SmartFlex System">SmartFlex System</h3>
+                        <p style="color: #a1a1aa; font-size: 0.9rem; margin-top: 5px;">
+                            Intelligent Timetable Generation.
+                            <br><span class="tech-pill">Python OR-Tools</span> <span class="tech-pill">Full Stack</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="card-spotlight"></div>
+            </a>
+
+            <a href="hcm.html" class="card card-tall project-card" data-id="human-cms">
+                <img src="/static/hcm.png" class="card-image" alt="Human-Like CMS">
+                <div class="card-content">
+                    <i data-lucide="brain-circuit" class="card-icon"></i>
+                    <div>
+                        <h3 class="hacker-text" data-value="Human-Like CMS">Human-Like CMS</h3>
+                        <p style="color: #a1a1aa; font-size: 0.9rem; margin-top: 10px;">Context-aware content engine.</p>
+                        <div style="margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="tech-pill">NLP Logic</span> <span class="tech-pill">Automation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-spotlight"></div>
+            </a>
+
+            <a href="spotifyc.html" class="card project-card" data-id="spotify">
+                <img src="/static/spotify.png" class="card-image" alt="Sonic UI">
+                <div class="card-content">
+                    <i data-lucide="music" class="card-icon"></i>
+                    <div>
+                        <h3 class="hacker-text" data-value="Sonic UI">Sonic UI</h3>
+                        <p style="font-size: 0.8rem; margin-top: 5px; color: #a1a1aa;">High-fidelity streaming interface.</p>
+                    </div>
+                </div>
+                <div class="card-spotlight"></div>
+            </a>
+        </div>
+    </section>
+
+    <footer id="contact" class="event-horizon-container">
+        <div class="kinetic-text text-connect">CONNECT</div>
+
+        <div class="singularity-void"></div>
+        <div class="horizon-content">
+            <div class="cta-wrapper">
+                <button id="open-contact-modal" class="aesthetic-btn magnetic-pull">
+                    <span class="btn-content">LET'S TALK</span>
+                    <div class="btn-glow"></div>
+                </button>
+            </div>
+            
+            <div class="footer-meta">
+                <div class="meta-item contact-wrapper">
+                    <span>CONTACT</span>
+                    <button id="reveal-contact-btn" class="reveal-btn">
+                        SHOW DETAILS <i data-lucide="chevron-down" style="width: 14px; display: inline;"></i>
+                    </button>
+                    <div id="contact-details" class="hidden-details">
+                        <p style="color: #fff; margin-top: 10px;">+91 82877 57838</p>
+                        <p>avi40973@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <span>SOCIALS</span>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/avi-gupta-a879b2320" target="_blank" class="social-brand linkedin"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.instagram.com/aviiii_30?igsh=MWhqY3Q5Y2l0MTR3aQ==" target="_blank" class="social-brand instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://github.com/AviGupta30" target="_blank" class="social-brand github"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <span>SYSTEM STATUS</span>
+                    <p class="blink">ONLINE</p>
+                    <div class="code-hints"></div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="image-modal-overlay">
+        <button id="close-image-modal" class="close-btn"><i data-lucide="x"></i></button>
+        <img id="expanded-image" src="" alt="Certificate">
+    </div>
+
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn"><i data-lucide="x"></i></button>
+            <h2 class="hacker-text" data-value="INITIATE UPLINK">INITIATE UPLINK</h2>
+            <form id="contact-form">
+                <div class="form-group"><input type="text" name="name" placeholder="IDENTIFIER (NAME)" required></div>
+                <div class="form-group"><input type="email" name="email" placeholder="RETURN ADDRESS (EMAIL)" required></div>
+                <div class="form-group"><input type="text" name="subject" placeholder="SUBJECT LINE" required></div>
+                <div class="form-group"><textarea name="message" placeholder="ENTER TRANSMISSION DATA..." required></textarea></div>
+                <button type="submit" class="submit-btn"><span id="btn-text">SEND TRANSMISSION</span><div class="btn-glow"></div></button>
+                <p id="form-status" style="margin-top:10px; font-size: 0.8rem;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/js/state.js"></script>
+    <script src="/static/js/visuals.js"></script>
+    <script src="/static/js/animations.js"></script>
+    <script src="/static/js/ui.js"></script>
+    <script src="/static/js/controls.js"></script>
+    <script src="/static/js/main.js"></script>
+    
+    <script src="/chatbot.js"></script> 
+</body>
+</html>
